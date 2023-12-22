@@ -8,7 +8,7 @@ import { productNames } from "@/utils/constants";
 
 export function ContactUs() {
   const { register, handleSubmit, formState, watch } = useForm<FormData>({});
-  const selectedProductType = watch("productType");
+  const selectedProductType = watch("productType" as any);
   const onSubmit = async (values: FormData) => {
     // try {
     //   const feedRes = values?._id
