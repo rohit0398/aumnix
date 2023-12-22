@@ -1,113 +1,145 @@
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
+import { Button } from "@/atom";
+import { ContactUs } from "@/molecules/contactUs";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
+  const products = [
+    {
+      img: "/smartHome.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      img: "/smartHome.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      img: "/smartHome.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      img: "/smartHome.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      img: "/smartHome.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  ];
+
+  const useCases = [
+    {
+      img: "/droneMonitor.png",
+      title: "Drone Intellect",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+  ];
+
+  const clients = [
+    "/client1.png",
+    "/client2.png",
+    "/client3.png",
+    "/client4.png",
+    "/client5.png",
+    "/client6.png",
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className=" container min-h-screen">
+      <div className=" min-h-screen"></div>
+      <div>
+        <div className=" text-xl text-app-cyan font-semibold">
+          Innovate with Intelligent Devices
+        </div>
+        <div className=" text-6xl mt-2">Products</div>
+
+        <div className=" grid grid-cols-2 gap-12 mt-6">
+          {products.map((val, ind) => (
+            <div
+              key={ind}
+              className={` ${
+                ind % 2 !== 0 ? "translate-y-24" : ""
+              } relative flex flex-col p-8 min-h-40 [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.03),_rgba(255,_255,_255,_0.03))] [backdrop-filter:blur(200px)] box-border rounded-3xl border-2 border-solid border-gray-600`}
+            >
+              <div className="absolute top-1/4 bottom-1/4 left-1/4 right-1/4 rounded-full [background:linear-gradient(266.46deg,_rgba(234,_237,_255,_0.3),_rgba(255,_255,_255,_0.18)_45.9%),_linear-gradient(91.9deg,_rgba(100,_77,_255,_0.4),_rgba(114,_149,_255,_0.4)_21.12%,_rgba(137,_217,_255,_0.4)_45.61%,_rgba(208,_201,_240,_0.4)_64.06%,_rgba(84,_91,_239,_0.4))] blur-[5rem] opacity-60"></div>
+              <div className=" max-w-80">
+                <img
+                  src={val?.img}
+                  className=" object-contain"
+                  alt={`product-img-${ind}`}
+                />
+              </div>
+              <div className=" mt-5 w-11/12">{val.text}</div>
+              <div className=" ml-auto mt-10">
+                <Button title="Read More" variant="out-lined" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className=" mt-28">
+        <div className=" text-xl text-app-cyan font-semibold">
+          Real-world Magic
+        </div>
+        <div className=" text-6xl mt-2">Use Cases</div>
+
+        <div className=" relative mt-14 min-h-80 rounded-3xl [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.04),_rgba(255,_255,_255,_0.04))] [backdrop-filter:blur(200px)] box-border  border-2 border-solid border-gray-500">
+          <div className="absolute inset-0 rounded-3xl [background:linear-gradient(175.61deg,_rgba(37,_43,_61,_0),_rgba(3,_253,_187,_0.38))] blur-1xl"></div>
+          <div className=" absolute z-10 -top-5 right-20 flex gap-2">
+            <div className=" bg-white/70 hover:bg-white p-2 rounded-full cursor-pointer">
+              <ChevronLeftIcon className="h-6 w-6 text-black" />
+            </div>
+            <div className=" bg-white/70 hover:bg-white p-2 rounded-full cursor-pointer">
+              <ChevronRightIcon className="h-6 w-6 text-black" />
+            </div>
+          </div>
+          <div className=" flex items-center justify-between gap-12 shrink-0">
+            <div className=" p-12">
+              <div className=" text-[2.6rem] font-medium">
+                {useCases[0].title}
+              </div>
+              <div className=" text-base font-normal mt-12">
+                {useCases[0].text}
+              </div>
+            </div>
+            <div className=" shrink-0 flex justify-end">
+              <img
+                src={useCases[0].img}
+                className=" w-11/12 object-cover scale-110 translate-y-6 translate-x-4 "
+                alt={`usecase-img`}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className=" mt-28">
+        <div className=" text-xl text-app-cyan font-semibold">
+          Trusted by Brands
+        </div>
+        <div className=" text-6xl mt-2">Our Clients</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className=" mt-12 w-full overflow-x-auto flex gap-12 items-center scroll-thin">
+          {clients.map((val, ind) => (
+            <div key={ind} className=" max-w-xs min-w-44">
+              <img src={val} className=" object-contain " alt={`partner-img`} />
+            </div>
+          ))}
+        </div>
+      </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <div className=" my-28">
+        <div className=" text-xl text-app-cyan font-semibold">
+          Let’s Talk get more Details
+        </div>
+        <div className=" text-6xl mt-2">Let’s Discuss</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className=" relative mt-12 p-8 rounded-3xl [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.04),_rgba(255,_255,_255,_0.03))] [backdrop-filter:blur(200px)] box-border border-2 border-solid border-gray-500">
+          <div className="absolute -z-10 top-1/4 bottom-0 left-1/4 right-1/4 rounded-full [background:linear-gradient(266.46deg,_rgba(234,_237,_255,_0.3),_rgba(255,_255,_255,_0.18)_45.9%),_linear-gradient(91.9deg,_rgba(100,_77,_255,_0.4),_rgba(114,_149,_255,_0.4)_21.12%,_rgba(137,_217,_255,_0.4)_45.61%,_rgba(208,_201,_240,_0.4)_64.06%,_rgba(84,_91,_239,_0.4))] blur-[5rem] opacity-40"></div>
+          <ContactUs />
+        </div>
       </div>
     </main>
-  )
+  );
 }
