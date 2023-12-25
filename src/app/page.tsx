@@ -46,8 +46,22 @@ export default function Home() {
 
   return (
     <main className=" container min-h-screen">
-      <div className=" min-h-screen"></div>
-      <div>
+      <div className=" flex justify-end relative">
+        <div className=" absolute top-12 left-0 right-2/4">
+          <div className=" text-8xl font-semibold">
+            Unlock Your Home with AI
+          </div>
+          <div className=" text-2xl font-light my-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div>
+            <Button title="Request For Demo" />
+          </div>
+        </div>
+        <img src="/banner1.png" className=" w-10/12 object-cover" alt="header-img"/>
+      </div>
+      <div className=" mt-28">
         <div className=" text-xl text-app-cyan font-semibold">
           Innovate with Intelligent Devices
         </div>
@@ -78,7 +92,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" mt-28">
+      <div className=" mt-28" id="use_case">
         <div className=" text-xl text-app-cyan font-semibold">
           Real-world Magic
         </div>
@@ -114,13 +128,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" mt-28">
+      <div className=" my-48" id="clients">
         <div className=" text-xl text-app-cyan font-semibold">
           Trusted by Brands
         </div>
         <div className=" text-6xl mt-2">Our Clients</div>
 
-        <div className=" mt-12 w-full overflow-x-auto flex gap-12 items-center scroll-thin">
+        <div className=" mt-8 w-full overflow-x-auto flex gap-12 items-center scroll-thin">
           {clients.map((val, ind) => (
             <div key={ind} className=" max-w-xs min-w-44">
               <img src={val} className=" object-contain " alt={`partner-img`} />
@@ -129,7 +143,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" my-28">
+      <div className=" mb-28" id='about'>
         <div className=" text-xl text-app-cyan font-semibold">
           Let’s Talk get more Details
         </div>

@@ -33,7 +33,7 @@ export function Header() {
           </div>
           <div className=" font-semibold text-4xl  ">Aumnix</div>
         </div>
-        <div className=" flex gap-10 py-8 px-14 rounded-full [background:linear-gradient(268.91deg,_rgba(255,_255,_255,_0.1),_rgba(126,_125,_125,_0.19))] [backdrop-filter:blur(200px)] box-border border-[1px] border-solid border-gray-500">
+        <div className=" flex gap-10 py-8 px-14 rounded-full [background:linear-gradient(268.91deg,_rgba(255,_255,_255,_0.1),_rgba(126,_125,_125,_0.19))] [backdrop-filter:blur(200px)] box-border border border-solid border-gray-500">
           {navs.map((val, ind) => (
             <CustomLink
               key={ind}

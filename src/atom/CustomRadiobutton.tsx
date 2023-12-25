@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface RadioInputProps {
   label: string;
@@ -18,11 +18,11 @@ export const RadioInput: React.FC<RadioInputProps> = ({
   return (
     <div
       className={`flex min-h-[2.375rem] items-center justify-center rounded-full border border-gray-600 px-6
-      hover:border-gray-300 hover:[background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.03),_rgba(255,_255,_255,_0.03))] hover:[backdrop-filter:blur(200px)] hover:box-border
+      hover:border-gray-300 hover:[background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.1),_rgba(255,_255,_255,_0.19))] hover:[backdrop-filter:blur(200px)] hover:box-border
       ${
         checked
-          ? ' border-gray-300 [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.03),_rgba(255,_255,_255,_0.03))] [backdrop-filter:blur(200px)] box-border'
-          : ''
+          ? " border-gray-300 [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.1),_rgba(255,_255,_255,_0.19))] [backdrop-filter:blur(200px)] box-border"
+          : ""
       }`}
     >
       <input
