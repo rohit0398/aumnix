@@ -91,3 +91,50 @@ export function AnimateButtonContainer({
     </div>
   );
 }
+
+export function AnimateSlideContainer({
+  children,
+  width = "w-fit",
+  runAgain,
+}: {
+  children: React.ReactNode;
+  width?: string;
+  runAgain?: any;
+}) {
+  const divRef = useRef(null);
+  const isInView = useInView(divRef, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (runAgain || runAgain === 0) {
+      mainControls.set("hidden");
+      mainControls.start("visible");
+    }
+  }, [runAgain]);
+
+  return (
+    <div
+      ref={divRef}
+      className={` relative overflow-hidden ${width} flex justify-end`}
+    >
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: "30%", transformOrigin: "right" },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.6, staggerChildren: 0.8 }}
+        className=" flex justify-end"
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+}
