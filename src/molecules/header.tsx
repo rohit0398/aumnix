@@ -10,7 +10,7 @@ import { Button, CustomLink } from "@/atom";
 import { navs } from "@/utils/constants";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export function Header1() {
+export function Header() {
   const { push } = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
