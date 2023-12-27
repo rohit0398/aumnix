@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "@/atom";
+import { Button, CustomLink } from "@/atom";
 import {
   AnimateButtonContainer,
   AnimateContainer,
@@ -82,7 +82,9 @@ export default function Home() {
               </AnimateContainer>
 
               <div className=" ml-auto mt-6 lg:mt-10">
-                <Button title="Read More" variant="out-lined" />
+                <CustomLink href="/products?type=ai_homes">
+                  <Button title="Read More" variant="out-lined" />
+                </CustomLink>
               </div>
             </div>
           ))}

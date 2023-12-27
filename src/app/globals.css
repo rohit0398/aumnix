@@ -18,6 +18,14 @@ body {
   );
 }
 
+.background-gradient-multi {
+  background: linear-gradient(
+    90deg,
+    rgba(156, 189, 255, 1) 0%,
+    rgba(0, 227, 167, 1) 100%
+  );
+}
+
 .last-word::last-word {
   color: black;
 }

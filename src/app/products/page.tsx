@@ -72,14 +72,14 @@ export default function Products() {
         />
       </div>
 
-      <div className=" w-full min-h-[50vh] lg:min-h-fit aspect-[1/.42] flex flex-col justify-between gap-10 py-14">
+      <div className=" w-full min-h-[50vh] lg:min-h-fit aspect-[1/.42] flex flex-col justify-between gap-10 py-12 lg:py-8 xl:py-12">
         <ProductTypeChecklist />
-        <div>
-          <div className=" font-bold text-xl lg:text-6xl">
+        <div  className=" flex flex-col gap-6 xl:gap-10">
+          <div className=" font-bold text-xl sm:text-3xl lg:text-4xl xl:text-6xl">
             Unleash the
-            <span className=" text-app-cyan">Future of Home</span> Intelligence
+            <span className=" text-app-cyan"> Future of Home</span> Intelligence
           </div>
-          <div className=" font-normal text-xs lg:text-3xl max-w-[75%] line-clamp-5">
+          <div className=" font-normal text-xs sm:text-base xl:text-2xl max-w-full lg:max-w-[75%] line-clamp-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

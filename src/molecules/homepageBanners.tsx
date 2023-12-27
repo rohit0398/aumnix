@@ -129,14 +129,14 @@ export function HomePageBanners() {
 
   return (
     <div onClick={() => setIndex((prev) => prev + 1)}>
-      <div className=" flex justify-end relative mt-10 lg:mt-0">
+      <div className=" flex justify-end relative mt-10">
         <div className=" absolute top-3 lg:top-12 left-0 right-[45%]">
           <AnimateContainer runAgain={index}>
-            <div className=" text-2xl lg:text-8xl leading-tight lg:leading-none font-semibold line-clamp-2">
+            <div className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-tight lg:leading-none font-semibold line-clamp-2">
               {banners[index].title}
             </div>
 
-            <div className=" text-[.5rem] lg:text-2xl leading-tight lg:leading-none font-light my-4 lg:my-12 line-clamp-3">
+            <div className=" text-[.5rem] sm:text-sm md:text-base lg:text-xl xl:text-2xl leading-tight font-light my-4 lg:my-10 xl:my-12 line-clamp-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>

@@ -1,7 +1,7 @@
 import { AnimateButtonContainer } from "@/molecules/animateContainer";
 import type { ReactNode } from "react";
 
-type IButtonVarient = "default" | "transparent" | "out-lined";
+type IButtonVarient = "default" | "transparent" | "out-lined" | 'out-lined-selected';
 
 type IProps = {
   title: string | ReactNode;
@@ -20,9 +20,9 @@ export function Button({
   title,
   disabled = false,
   size = "",
-  paddingMargin = "px-4 py-0 lg:px-10 lg:py-2.5",
+  paddingMargin = "px-4 py-1 lg:px-6 lg:py-1 xl:px-10 xl:py-2.5",
   variant = "default",
-  fontSize = " text-[.5rem] lg:text-xl font-semibold",
+  fontSize = " text-xs lg:text-base xl:text-xl font-semibold",
   className = "",
   onClick,
   rounded = "rounded-full",
@@ -37,6 +37,10 @@ export function Button({
         }`;
       case "out-lined":
         return `bg-transparent border border-gray-400 opacity-100 hover:border-gray-200 hover:scale-[1.01] text-center ${rounded} ${className} ${size} ${paddingMargin} ${fontSize} ${
+          disabled ? "opacity-40 cursor-not-allowed" : ""
+        }`;
+      case "out-lined-selected":
+        return `border border-gray-400 opacity-100 hover:border-gray-200 hover:scale-[1.01] text-center ${rounded} ${className} ${size} ${paddingMargin} ${fontSize} ${
           disabled ? "opacity-40 cursor-not-allowed" : ""
         }`;
       default:

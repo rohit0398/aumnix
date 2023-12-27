@@ -16,6 +16,7 @@ export function Header() {
   const searchParams = useSearchParams();
   const [hashValue, setHashValue] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  console.log("pathname", pathName);
 
   useEffect(() => {
     // Get the hash value directly from the window.location
@@ -39,20 +40,21 @@ export function Header() {
     }
   };
 
+  // ${
+  //   scrolled
+  //     ? "[background:linear-gradient(120.38deg,_#3b4563,_#151924)] rounded-b-lg"
+  //     : "bg-transparent"
+  // }
   return (
     <Disclosure
       as="nav"
-      className={`container sticky top-0 z-50 transition duration-500 ${
-        scrolled
-          ? "[background:linear-gradient(120.38deg,_#3b4563,_#151924)] rounded-b-lg"
-          : "bg-transparent"
-      }`}
+      className={` container sticky top-0 z-50 transition duration-500 `}
     >
       {({ open }) => (
         <>
           <div className=" py-4 lg:mt-9">
             <div className="relative flex items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
@@ -64,12 +66,12 @@ export function Header() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 md:flex-none items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 lg:flex-none items-center justify-center lg:items-stretch">
                 <div
                   onClick={() => push("/")}
-                  className="flex flex-shrink-0 items-center cursor-pointer"
+                  className="flex gap-4 flex-shrink-0 items-center cursor-pointer"
                 >
-                  <div className=" max-w-14">
+                  <div className=" lg:max-w-10 xl:max-w-14">
                     <Image
                       src="/logo.svg"
                       alt="Logo"
@@ -84,21 +86,27 @@ export function Header() {
                       }}
                     />
                   </div>
-                  <div className=" font-semibold text-4xl  ">Aumnix</div>
+                  <div className=" font-semibold text-xl xl:text-4xl">
+                    Aumnix
+                  </div>
                 </div>
               </div>
-              <div className="hidden sm:ml-6 sm:block">
-                <div className=" flex gap-10 py-8 px-14 rounded-full [background:linear-gradient(268.91deg,_rgba(255,_255,_255,_0.1),_rgba(126,_125,_125,_0.19))] [backdrop-filter:blur(200px)] box-border border border-solid border-gray-500">
+              <div className="hidden lg:ml-6 lg:block">
+                <div className=" flex gap-10 lg:gap-4 xl:gap-10 py-8 lg:px-6 xl:px-14 rounded-full [background:linear-gradient(268.91deg,_rgba(255,_255,_255,_0.1),_rgba(126,_125,_125,_0.19))] [backdrop-filter:blur(200px)] box-border border border-solid border-gray-500">
                   {navs.map((val, ind) => (
                     <CustomLink
                       key={ind}
-                      href={val.link}
+                      href={
+                        val.link === "/products"
+                          ? `${val.link}?type=ai_homes`
+                          : val.link
+                      }
                       text={val.name}
                       className={`${
                         hashValue === val.link
                           ? "text-white"
                           : "text-white/20 hover:text-white/70 hover:scale-[1.05]"
-                      } text-xl font-semibold text-center`}
+                      } text-xl font-semibold text-center line-clamp-1`}
                     ></CustomLink>
                   ))}
                 </div>
@@ -112,7 +120,7 @@ export function Header() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden absolute top-16 left-4 right-4 z-50 rounded-lg flex justify-start [background:linear-gradient(270.38deg,_#3b4563,_#151924)]  box-border">
+          <Disclosure.Panel className="lg:hidden absolute top-16 left-4 right-4 z-50 rounded-lg flex justify-start [background:linear-gradient(270.38deg,_#3b4563,_#151924)]  box-border">
             <div className="space-y-1 px-4 py-8 text-left">
               {navs.map((val) => (
                 <Disclosure.Button
