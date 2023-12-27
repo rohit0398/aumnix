@@ -1,7 +1,10 @@
 import { Header } from "@/molecules";
+import { AnimateContainer } from "@/molecules/animateContainer";
 import { Footer } from "@/molecules/footer";
+import { Header1 } from "@/molecules/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +25,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} [background:linear-gradient(120.38deg,_#3b4563,_#151924)]`}
       >
-        <Header />
+        {/* <Header /> */}
+        <Header1 />
         {children}
         <Footer />
       </body>

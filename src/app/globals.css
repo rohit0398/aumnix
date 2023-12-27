@@ -17,3 +17,7 @@ body {
     rgba(34, 95, 253, 1) 100%
   );
 }
+
+.last-word::last-word {
+  color: black;
+}

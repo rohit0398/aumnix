@@ -67,19 +67,19 @@ export default function Products() {
       <div className=" absolute top-0 left-0 right-0 -z-10">
         <img
           src="/productBanner1.png"
-          className=" object-cover w-full aspect-[1/.48]"
+          className=" object-cover w-full min-h-[60vh] lg:min-h-fit aspect-[1/.48]"
           alt='bannerImg'
         />
       </div>
 
-      <div className=" w-full aspect-[1/.48] flex flex-col justify-between gap-10 py-14">
+      <div className=" w-full min-h-[50vh] lg:min-h-fit aspect-[1/.42] flex flex-col justify-between gap-10 py-14">
         <ProductTypeChecklist />
         <div>
-          <div className=" font-bold text-6xl">
+          <div className=" font-bold text-xl lg:text-6xl">
             Unleash the
             <span className=" text-app-cyan">Future of Home</span> Intelligence
           </div>
-          <div className=" font-normal text-3xl max-w-[75%]">
+          <div className=" font-normal text-xs lg:text-3xl max-w-[75%] line-clamp-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -89,40 +89,40 @@ export default function Products() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-28">
+      <div className=" flex flex-col gap-40 mt-20 lg:mt-40">
         {data.map((val, ind) => (
-          <div key={ind} className=" grid grid-cols-3">
+          <div key={ind} className=" grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0">
             <div className=" flex justify-center max-h-[28rem]">
               <img src={val?.img} className=" object-cover" alt="alt-img" />
             </div>
             <div
               className={` col-span-2 ${
-                ind % 2 !== 0 ? "-order-1" : "order-1"
+                ind % 2 !== 0 ? "lg:-order-1" : "order-1"
               }`}
             >
               <div
-                className={` flex gap-10 items-center ${
+                className={` flex gap-6 lg:gap-10 items-center ${
                   ind % 2 !== 0 ? " justify-end" : " justify-start"
                 }`}
               >
-                <div className=" p-12 rounded-3xl [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.1),_rgba(255,_255,_255,_0.1))] hover:[backdrop-filter:blur(200px)] hover:box-border">
-                  <div className=" max-w-32">
+                <div className=" p-6 lg:p-12 rounded-3xl [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.1),_rgba(255,_255,_255,_0.1))] hover:box-border">
+                  <div className=" max-w-24 lg:max-w-32">
                     <img src={val?.icon} className=" object-cover" alt="alt-img" />
                   </div>
                 </div>
                 <div
-                  className={` text-5xl font-semibold ${
+                  className={` text-2xl lg:text-5xl font-semibold ${
                     ind % 2 !== 0 ? "-order-1" : "order-1"
                   }`}
                 >
                   {val?.title}
                 </div>
               </div>
-              <div className=" text-black bg-white rounded-3xl -mt-5 mx-10 z-10 p-8">
+              <div className=" text-sm lg:text-base text-black bg-white rounded-3xl -mt-2 lg:-mt-5 mx-0 lg:mx-10 z-10 p-4 lg:p-8">
                 {val?.description}
               </div>
               <div
-                className={` flex mt-10 mx-10 ${
+                className={` flex mt-6 lg:mt-10 mx-0 lg:mx-10 ${
                   ind % 2 !== 0 ? "justify-start" : "justify-end"
                 }`}
               >

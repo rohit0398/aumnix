@@ -24,7 +24,7 @@ export function ContactUs() {
   return (
     <div>
       <form className="mt-4 space-y-10" onSubmit={handleSubmit(onSubmit)}>
-        <div className=" grid grid-cols-2 gap-16">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16">
           <InputField
             label="Full Name"
             name="fullName"
@@ -78,7 +78,7 @@ export function ContactUs() {
             Which product do you like ?
           </label>
 
-          <div className=" flex gap-10">
+          <div className=" flex gap-10 flex-wrap">
             {productNames.map((val, ind) => (
               <RadioInput
                 key={ind}
@@ -95,7 +95,7 @@ export function ContactUs() {
         <div>
           <label
             htmlFor={"details"}
-            className="mb-1 block text-left text-gray text-xl font-medium"
+            className="mb-2 block text-left text-gray text-xl font-medium"
           >
             Enter Your Specific Details
           </label>
@@ -107,9 +107,9 @@ export function ContactUs() {
           />
         </div>
 
-        <div className=" flex justify-between">
-          <div className="flex items-center gap-7 shrink-0">
-            <div>
+        <div className=" flex flex-col lg:flex-row justify-between gap-8">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 shrink-0">
+            <div className=" flex gap-2 items-center">
               <EnvelopeIcon className="h-6 w-6 inline-block" />
               <CustomLink
                 href={"mailto:hello@aumnix.co.in"}
@@ -117,7 +117,7 @@ export function ContactUs() {
                 className={`text-white hover:scale-[1.05] text-xl font-medium`}
               ></CustomLink>
             </div>
-            <div>
+            <div className=" flex gap-2 items-center">
               <PhoneIcon className="h-6 w-6 inline-block" />
               <CustomLink
                 href={"tel:+91-9876543219"}

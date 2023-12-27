@@ -9,7 +9,7 @@ export function ProductTypeChecklist() {
     const selectedProductType = watch("productType" as any);
   
   return (
-    <div className=" flex gap-10 justify-center">
+    <div className=" flex gap-10 justify-center flex-wrap">
       {productNames.map((val, ind) => (
         <RadioInput
           key={ind}
