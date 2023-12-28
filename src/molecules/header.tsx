@@ -16,7 +16,6 @@ export function Header() {
   const searchParams = useSearchParams();
   const [hashValue, setHashValue] = useState("");
   const [scrolled, setScrolled] = useState(false);
-  console.log("pathname", pathName);
 
   useEffect(() => {
     // Get the hash value directly from the window.location

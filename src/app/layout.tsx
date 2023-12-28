@@ -1,5 +1,5 @@
 import { Header } from "@/molecules";
-import { AnimateContainer } from "@/molecules/animateContainer";
+import { ToastContainer } from "react-toastify";
 import { Footer } from "@/molecules/footer";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -28,6 +28,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

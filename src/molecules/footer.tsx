@@ -1,10 +1,9 @@
 "use client";
 
-import { CustomLink } from "@/atom";
+import { CustomLink, SocialLinks } from "@/atom";
 import { navs, productNames } from "@/utils/constants";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export function Footer() {
   const { push } = useRouter();
@@ -74,22 +73,8 @@ export function Footer() {
             Kendriya Vihar 2 , Sector 82, Pocket 5, A-19 Uttar Pradesh, Noida -
             201304 India
           </div>
-          <div className=" flex gap-2 items-center">
-            <EnvelopeIcon className="h-6 w-6 inline-block" />
-            <CustomLink
-              href={"mailto:hello@aumnix.co.in"}
-              text={"hello@aumnix.co.in"}
-              className={`text-white hover:scale-[1.05] text-xl font-medium`}
-            ></CustomLink>
-          </div>
-          <div className=" flex gap-2 items-center">
-            <PhoneIcon className="h-6 w-6 inline-block" />
-            <CustomLink
-              href={"tel:+91-9876543219"}
-              text={"+91-9876543219"}
-              className={`text-white hover:scale-[1.05] text-xl font-medium`}
-            ></CustomLink>
-          </div>
+
+          <SocialLinks />
         </div>
       </div>
     </div>

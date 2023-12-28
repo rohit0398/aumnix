@@ -1,5 +1,6 @@
 @import "@/style/scrollbar.css";
 @import "@/style/form-customize.css";
+@import 'react-toastify/dist/ReactToastify.css';
 
 @tailwind base;
 @tailwind components;

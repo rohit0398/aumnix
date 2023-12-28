@@ -42,7 +42,7 @@ export function HomePageBanners() {
         setIndex((prev) => {
           return prev === 3 ? 0 : prev + 1;
         });
-      }, 2000);
+      }, 5000);
     }
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);

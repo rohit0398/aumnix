@@ -26,11 +26,11 @@ export const InputField = <T extends Record<string, any>>({
 }: CustomInputProps<T>) => {
   const error: any = formState?.errors[name] as any;
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       {label && (
         <label
           htmlFor={name}
-          className="mb-1 block text-left text-gray text-xl font-medium"
+          className="mb-1 block text-left text-white text-xl font-medium"
         >
           {label}
         </label>
@@ -42,6 +42,11 @@ export const InputField = <T extends Record<string, any>>({
           error ? "border-red-500" : ""
         }`}
       />
+      {rules &&
+        typeof rules === "object" &&
+        Object.hasOwn(rules, "required") && (
+          <span className="absolute right-2 top-2 text-white">*</span>
+        )}
       {error && (
         <p className="mt-2 text-left text-sm text-red-600">{error.message}</p>
       )}
