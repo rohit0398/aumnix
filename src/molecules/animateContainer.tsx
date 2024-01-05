@@ -30,7 +30,7 @@ export function AnimateContainer({
   }, [runAgain]);
 
   return (
-    <div ref={divRef} className={` relative overflow-hidden ${width}`}>
+    <div ref={divRef} className={` relative ${width}`}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -45, scaleY: 0.6, transformOrigin: "top" },
@@ -121,11 +121,11 @@ export function AnimateSlideContainer({
   return (
     <div
       ref={divRef}
-      className={` relative overflow-hidden ${width} flex justify-end`}
+      className={` relative ${width} flex justify-end`}
     >
       <motion.div
         variants={{
-          hidden: { opacity: 0, x: "30%", transformOrigin: "right" },
+          hidden: { opacity: 0, x: "20%", transformOrigin: "right" },
           visible: { opacity: 1, x: 0 },
         }}
         initial="hidden"

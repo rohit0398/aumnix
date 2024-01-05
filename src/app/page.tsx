@@ -1,42 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button, CustomLink } from "@/atom";
-import {
-  AnimateButtonContainer,
-  AnimateContainer,
-} from "@/molecules/animateContainer";
+import { AnimateContainer } from "@/molecules/animateContainer";
 import { ContactUs } from "@/molecules/contactUs";
 import { HomePageBanners } from "@/molecules/homepageBanners";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { UseCaseBanner } from "@/molecules/useCasesBanner";
 
 export default function Home() {
   const products = [
     {
-      img: "/smartAgri.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      img: "/productHome.png",
+      text: "AIH (AI Home) brings a smarter living experience to your doorstep. Explore GingerDoorBell for advanced security with AI and IoT. Keep an eye on your baby's activities using GingerSecurity. Optimize electricity consumption effortlessly with GingerSenergy. Elevate your home with AIH – where security, childcare, and energy efficiency converge seamlessly. Welcome to the future of smart living.",
     },
     {
-      img: "/smartAgri.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      img: "/productAgri.png",
+      text: "AIA (AI Agri) redefines farming excellence. Agri Monitor revolutionizes season performance analysis, while Agri Flow ensures an efficient agricultural supply chain. Elevate your farming with AIA – where monitoring, analysis, and supply chain meet seamlessly for success in agriculture's future.",
     },
     {
-      img: "/smartAgri.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      img: "/productSmarc.png",
+      text: "AI SMarc redefines smart cities. Smarc Gateway handles diverse protocols for seamless IoT connectivity. Smar cPMS monitors real-time electricity, ensuring efficient energy management citywide. Elevate urban living with AI SMarc – where connectivity and energy efficiency unite for a brighter future.",
     },
     {
-      img: "/smartAgri.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      img: "/productHawk.png",
+      text: "AI Hawk is a groundbreaking autonomous UAV, excelling in patrolling and geo-surveying. With cutting-edge capabilities, it redefines unmanned aerial vehicles, unlocking new possibilities in the skies. Elevate your perspective with the precision of AI Hawk.",
     },
     {
-      img: "/smartAgri.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-  ];
-
-  const useCases = [
-    {
-      img: "/droneMonitor.png",
-      title: "Drone Intellect",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      img: "/productRetail.png",
+      text: "AI Retail redefines the retail experience. Air SCM customizes AI for seamless supply chain management, exclusively for the retail sector. Dive into precision with Air IN, as it transforms inventory tracking, ensuring efficiency and accuracy that sets a new standard in retail operations. Elevate your retail game with AI Retail.",
     },
   ];
 
@@ -91,46 +80,7 @@ export default function Home() {
         </div>
       </div>
 
-      <AnimateContainer>
-        <div className=" mt-28" id="use_case">
-          <div className=" text-xs lg:text-xl text-app-cyan font-semibold">
-            Real-world Magic
-          </div>
-          <div className=" text-4xl lg:text-6xl mt-2">Use Cases</div>
-
-          <div className=" relative mt-14 min-h-80 rounded-3xl [background:linear-gradient(90.3deg,_rgba(255,_255,_255,_0.04),_rgba(255,_255,_255,_0.04))] [backdrop-filter:blur(200px)] box-border  border-2 border-solid border-gray-500">
-            <div className="absolute inset-0 rounded-3xl [background:linear-gradient(175.61deg,_rgba(37,_43,_61,_0),_rgba(3,_253,_187,_0.38))] blur-1xl"></div>
-            <div className=" absolute z-10 -top-12 lg:-top-5 right-0 lg:right-20 flex gap-2">
-              <div className=" bg-white/70 hover:bg-white p-2 rounded-full cursor-pointer">
-                <ChevronLeftIcon className="h-6 w-6 text-black" />
-              </div>
-              <div className=" bg-white/70 hover:bg-white p-2 rounded-full cursor-pointer">
-                <ChevronRightIcon className="h-6 w-6 text-black" />
-              </div>
-            </div>
-            <div className=" flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12 shrink-0">
-              <div className=" p-6 lg:p-12">
-                <div className=" text-xl lg:text-[2.6rem] font-medium">
-                  {useCases[0].title}
-                </div>
-
-                <AnimateContainer>
-                  <div className=" text-xs lg:text-base font-normal mt-6 lg:mt-12">
-                    {useCases[0].text}
-                  </div>
-                </AnimateContainer>
-              </div>
-              <div className=" shrink-0 flex justify-end relative">
-                <img
-                  src={useCases[0].img}
-                  className=" w-11/12 object-cover scale-110 translate-y-6 translate-x-4"
-                  alt={`usecase-img`}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimateContainer>
+      <UseCaseBanner />
 
       <div className=" mt-48 mb-32" id="clients">
         <div className=" text-xs lg:text-xl text-app-cyan font-semibold">

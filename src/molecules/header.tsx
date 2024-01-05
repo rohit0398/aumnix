@@ -68,7 +68,9 @@ export function Header() {
               <div className="flex flex-1 lg:flex-none items-center justify-center lg:items-stretch">
                 <div
                   onClick={() => push("/")}
-                  className="flex gap-4 flex-shrink-0 items-center cursor-pointer"
+                  className={`flex gap-4 flex-shrink-0 items-center cursor-pointer ${
+                    scrolled ? "opacity-0" : "opacity-100"
+                  } transition-opacity duration-300`}
                 >
                   <div className=" lg:max-w-10 xl:max-w-14">
                     <Image
