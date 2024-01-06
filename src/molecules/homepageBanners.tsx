@@ -13,22 +13,22 @@ const banners = [
     desc: "Where AI meets IoT for top-tier security. Facial recognition and edge-based object detection ensure a clear view of your doorstep's visitors.",
   },
   {
-    img: "/banner2.png",
+    img: "/banner1.png",
     title: "Ease Your Farming with AI",
     desc: `Elevate your agriculture with AIAgri. Precision farming, crop analysis, and harvest forecasts. Seamlessly integrate e-commerce, optimize supply chains, and get detailed nutritional analysis reports for your yield.`,
   },
   {
-    img: "/banner3.png",
+    img: "/banner1.png",
     title: "Smart City with AI",
     desc: `Discover a sustainable life with AISmarc. Optimize power and natural resources, implement target-based waste management, and monetize waste. Experience city-level surveillance with AI patrol bots.`,
   },
   {
-    img: "/banner4.png",
+    img: "/banner1.png",
     title: "Let’s Fly with Experience of AI",
     desc: `Elevate your perspective with AIHawk, the eye in the sky. Benefit from autonomous operations, patrolling capabilities, and advanced geo-surveying for a truly immersive flying experience.`,
   },
   {
-    img: "/banner4.png",
+    img: "/banner1.png",
     title: "Automate your Retail with AI",
     desc: `Transform your business at your fingertips with AIRetail. Benefit from AI-driven supply chain management, real-time tracking, efficient inventory management and optimization, and advanced demand forecasting with automated replenishment.`,
   },

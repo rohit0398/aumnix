@@ -115,7 +115,7 @@ export function Header() {
               <div>
                 <Button
                   title="Talk to us"
-                  onClick={() => push("/#lets-talk")}
+                  onClick={() => push("#lets-talk")}
                 />
               </div>
             </div>
